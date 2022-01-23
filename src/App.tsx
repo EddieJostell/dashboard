@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Container from './components/Container/Container';
+import WorldWeather from './components/WorldWeather/WorldWeather';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <Container>
         <h1>Dashboard</h1>
+        <WorldWeather />
       </Container>
     </div>
   );
