@@ -12,8 +12,6 @@ const WorldWeather = () => {
     setCapital({ ...capital, capitalName: event?.target.value });
   };
 
-  //`https://api.openweathermap.org/data/2.5/weather?q={city name}&units=metric&APPID=006595c752436e02740e9d8ff6b6cd05`;
-
   const dropdownOptions = () => {
     return countries.map((opt, key) => (
       <option key={key} value={opt.CapitalName}>
