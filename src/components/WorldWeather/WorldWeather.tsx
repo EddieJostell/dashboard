@@ -17,6 +17,8 @@ const WorldWeather = () => {
     weatherData: [],
   });
 
+  // const [data, setData] = useState([]);
+
   const changeCity = (event: any) => {
     setWeatherInfo({ ...weatherInfo, capitalName: event?.target.value });
   };
