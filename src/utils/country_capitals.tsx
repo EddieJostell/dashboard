@@ -1,13 +1,13 @@
 export interface ICountries {
   CountryName: string;
   CapitalName: string;
-  CaptialLatitude: string;
-  CaptialLongtitude: string;
+  CapitalLatitude: string;
+  CapitalLongitude: string;
   CountryCode: string;
   ContinentName: string;
 }
 
-export const countries = [
+export const countries: ICountries[] = [
   {
     CountryName: 'Somaliland',
     CapitalName: 'Hargeisa',
