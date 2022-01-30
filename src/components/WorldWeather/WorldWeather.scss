@@ -1,7 +1,9 @@
 .WorldWeather {
   border: 1px solid #fff;
-  max-width: 400px;
-  margin: 0 auto;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px;
   --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -32,12 +34,18 @@
       justify-content: space-between;
       align-items: center;
 
-      /*  .townNtemp {
-        border: 1px solid red;
-        }
-    .humNwind {
-        border: 1px solid blue;
-        } */
+      .townNtemp {
+        display: flex;
+        flex-direction: row;
+      }
+      .hum {
+        display: flex;
+        flex-direction: row;
+      }
+      .wind {
+        display: flex;
+        flex-direction: row;
+      }
     }
 
     .img {

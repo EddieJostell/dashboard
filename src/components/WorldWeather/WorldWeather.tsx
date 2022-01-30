@@ -49,11 +49,6 @@ const WorldWeather = () => {
   };
 
   const showWeatherData = (info: any) => {
-    console.log('info', info);
-
-    /*  var today = new Date();
-    console.log('today', today);
- */
     return (
       <div className="forecast">
         <div className="townNtemp">
@@ -68,7 +63,7 @@ const WorldWeather = () => {
             {info.main ? info.main.temp.toFixed(0) : 'N/A'} °C
           </h1>
         </div>
-        <div className="humNwind">
+        <div className="hum">
           <h2 className="forecast-h2">
             <i className="owf owf-{info.wicon}"></i>{' '}
             {info.weather ? info.weather[0].main : 'N/A'}
@@ -81,6 +76,8 @@ const WorldWeather = () => {
             />{' '}
             {info.main ? info.main.humidity : 'N/A'}%
           </h2>
+        </div>
+        <div className="wind">
           <h2 className="forecast-h2">
             <img
               className="img"
@@ -98,10 +95,10 @@ const WorldWeather = () => {
   return (
     <div className="WorldWeather">
       <label>
-        <h1>Choose a city</h1>
+        <h1>Todays Weather</h1>
       </label>
       <select className="dropDown" onChange={changeCity}>
-        <option value="0">* World Capitals *</option>
+        <option value="0">* Pick a city *</option>
         {dropdownOptions()}
       </select>
       <div className="weatherDiv">
