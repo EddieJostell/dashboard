@@ -11,7 +11,7 @@
   .dropDown {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    width: 150px;
+    width: 250px;
     color: white;
 
     option {
@@ -35,16 +35,22 @@
       align-items: center;
 
       .townNtemp {
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
       }
       .hum {
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
       }
       .wind {
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
       }
     }
 
