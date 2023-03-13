@@ -7,13 +7,16 @@ interface IClockState {
 const Clock = () => {
   const [currentTime, setCurrentTime] = useState<IClockState>({ time: '' });
 
-  const ShowTime = () => {
+  const ShowTimeDate = () => {
     let timeArray = new Date().toLocaleString().split(' ');
     let date = timeArray[0];
 
+    date = date.substring(0, date.length - 1);
+
     return (
-      <div className="date">
-        <h1>{date}</h1>
+      <div className='date'>
+        {/*  <h1 className='date-title'>Current date</h1> */}
+        <h2>{date}</h2>
       </div>
     );
   };
@@ -30,9 +33,10 @@ const Clock = () => {
   });
 
   return (
-    <div className="Clock">
-      <h1 className="time">{currentTime.time}</h1>
-      {ShowTime()}
+    <div className='Clock'>
+      <h1>Current time</h1>
+      <h1 className='time'>{currentTime.time}</h1>
+      {ShowTimeDate()}
     </div>
   );
 };

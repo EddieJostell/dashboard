@@ -7,6 +7,7 @@ import Clock from './components/Clock/Clock';
 import { TestComponent } from './components/TestComponent/TestComponent';
 import { Country } from './components/Country/Country';
 import { findByLabelText } from '@testing-library/react';
+import { motion } from 'framer-motion';
 
 function App() {
   const [countryArray, setCountryArray] = useState<any>([]);
@@ -122,7 +123,20 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <h1 className='title'>Dashboard</h1>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            scale: 1,
+          }}
+          animate={{
+            opacity: 1,
+            scale: [1, 1.5, 1],
+            transition: { duration: 1.5, delay: 0.5 },
+          }}
+          className='title'
+        >
+          Dashboard
+        </motion.h1>
       </header>
       <Container>
         <div className='Dashboard'>
